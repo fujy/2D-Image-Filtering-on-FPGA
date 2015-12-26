@@ -1,0 +1,113 @@
+NET "clk_i"        LOC = "E3" |IOSTANDARD = "LVCMOS33"; #IO_L12P_T1_MRCC_35
+NET "clk_i" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%;
+
+#NET "pxl_clk_O" TNM_NET = sys_pxl_clk;
+
+NET "rst_i"        LOC = "E16" |IOSTANDARD = "LVCMOS33"; # BTNC - IO_L11N_T1_SRCC_15
+#NET "pdm_clk_o"    LOC = "J5" | IOSTANDARD = "LVCMOS33"; #IO_25_35
+#NET "pdm_data_i" 		LOC = "H5" | IOSTANDARD = "LVCMOS33"; #IO_L24N_T3_35
+#NET "pdm_lrsel_o" 	LOC = "F5" | IOSTANDARD = "LVCMOS33"; #IO_0_35
+#NET "pdm_data_o" 		LOC = "A11" | IOSTANDARD = "LVCMOS33"; #IO_L4N_T0_15
+#NET "pdm_en_o"   		LOC = "D12" | IOSTANDARD = "LVCMOS33"; #IO_L6P_T0_15
+NET "ISEcho"			LOC = "U9"  |IOSTANDARD = "LVCMOS33";
+NET "ISRealFreq"		LOC = "U8"  |IOSTANDARD = "LVCMOS33";
+NET "ISPureFreq"		LOC = "R7"  |IOSTANDARD = "LVCMOS33";
+NET "ISFIFO"			LOC = "R6"  |IOSTANDARD = "LVCMOS33";
+NET "ISFast"			LOC = "R5"  |IOSTANDARD = "LVCMOS33";
+NET "ISSlow"			LOC = "V7"  |IOSTANDARD = "LVCMOS33";
+
+NET "ISVolUp"			LOC = "V6"  |IOSTANDARD = "LVCMOS33" ;
+NET "ISVolDown"	   LOC = "V5"  |IOSTANDARD = "LVCMOS33";
+NET "ISSiren"	   LOC = "U4"  |IOSTANDARD = "LVCMOS33";
+NET "ISMusic"	   LOC = "V2"  |IOSTANDARD = "LVCMOS33";
+
+NET "FILTER_SEL(0)"	   LOC = "R3"  |IOSTANDARD = "LVCMOS33";
+NET "FILTER_SEL(1)"	   LOC = "P3"  |IOSTANDARD = "LVCMOS33";
+NET "FILTER_SEL(2)"	   LOC = "P4"  |IOSTANDARD = "LVCMOS33";
+
+#NET "audio_read"		LOC = "P4"  | IOSTANDARD = "LVCMOS33";
+#NET "audio_write"		LOC = "P3"  | IOSTANDARD = "LVCMOS33";
+NET "LED<0>"			LOC = "T8"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L24N_T3_34,						Sch name = LED0
+NET "LED<1>"			LOC = "V9"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L21N_T3_DQS_34,					Sch name = LED1
+NET "LED<2>"			LOC = "R8"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L24P_T3_34,						Sch name = LED2
+NET "LED<3>"			LOC = "T6"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L23N_T3_34,						Sch name = LED3
+NET "LED<4>"			LOC = "T5"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L12P_T1_MRCC_34,					Sch name = LED4
+NET "LED<5>"			LOC = "T4"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L12N_T1_MRCC_34,					Sch	name = LED5
+NET "LED<6>"			LOC = "U7"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L22P_T3_34,						Sch name = LED6
+NET "LED<7>"			LOC = "U6"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L22N_T3_34,						Sch name = LED7
+NET "LED<8>"			LOC = "V4"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L10N_T1_34,						Sch name = LED8
+NET "LED<9>"			LOC = "U3"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L8N_T1_34,						Sch name = LED9
+NET "LED<10>"			LOC = "V1"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L7N_T1_34,						Sch name = LED10
+NET "LED<11>"			LOC = "R1"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L17P_T2_34,						Sch name = LED11
+NET "LED<12>"			LOC = "P5"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L13N_T2_MRCC_34,					Sch name = LED12
+NET "LED<13>"			LOC = "U1"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L7P_T1_34,						Sch name = LED13
+NET "LED<14>"			LOC = "R2"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L15N_T2_DQS_34,					Sch name = LED14
+NET "LED<15>"			LOC = "P2"	|IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L15P_T2_DQS_34,					Sch name = LED15
+
+# VGA Signals
+NET "vga_red_o[0]" LOC = "A3" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_red_o[1]" LOC = "B4" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_red_o[2]" LOC = "C5" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_red_o[3]" LOC = "A4" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_blue_o[0]" LOC = "B7" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_blue_o[1]" LOC = "C7" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_blue_o[2]" LOC = "D7" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_blue_o[3]" LOC = "D8" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_green_o[0]" LOC = "C6" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_green_o[1]" LOC = "A5" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_green_o[2]" LOC = "B6" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_green_o[3]" LOC = "A6" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_hs_o" LOC = "B11" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+NET "vga_vs_o" LOC = "B12" |IOSTANDARD = "LVCMOS33" |SLEW = "FAST";
+
+# PSRAM Memory Signals
+#NET "Mem_A[0]" LOC = "J18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[1]" LOC = "H17"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[2]" LOC = "H15"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[3]" LOC = "J17"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[4]" LOC = "H16"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[5]" LOC = "K15"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[6]" LOC = "K13"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[7]" LOC = "N15"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[8]" LOC = "V16"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[9]" LOC = "U14"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[10]" LOC = "V14"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[11]" LOC = "V12"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[12]" LOC = "P14"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[13]" LOC = "U16"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[14]" LOC = "R15"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[15]" LOC = "N14"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[16]" LOC = "N16"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[17]" LOC = "M13"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[18]" LOC = "V17"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[19]" LOC = "U17"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[20]" LOC = "T10"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[21]" LOC = "M16"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_A[22]" LOC = "U13"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_WEN" LOC = "R11"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_OEN" LOC = "H14"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_CEN" LOC = "L18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_UB" LOC = "J13"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_LB" LOC = "J15"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_CLK" LOC = "T15"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_ADV" LOC = "T13"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_CRE" LOC = "J14"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[0]" LOC = "R12"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[1]" LOC = "T11"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[2]" LOC = "U12"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[3]" LOC = "R13"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[4]" LOC = "U18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[5]" LOC = "R17"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[6]" LOC = "T18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[7]" LOC = "R18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[8]" LOC = "F18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[9]" LOC = "G18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[10]" LOC = "G17"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[11]" LOC = "M18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[12]" LOC = "M17"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[13]" LOC = "P18"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[14]" LOC = "N17"  |IOSTANDARD = "LVCMOS33";
+#NET "Mem_DQ[15]" LOC = "P17"  |IOSTANDARD = "LVCMOS33";
+#Created by Constraints Editor (xc7a100t-csg324-1) - 2014/12/19
+PIN "Inst_DataFlow_Display/Inst_VGA/Inst_PxlClkGen/mmcm_adv_inst.CLKOUT0" TNM = TS_VGA_clk;
